@@ -1,0 +1,222 @@
+/* Corporate Base Styles & Variables */
+:root {
+    --corp-blue: #0A192F;
+    --corp-gold: #C5A059;
+    --corp-gold-hover: #D4AF6A;
+    --text-dark: #222222;
+    --text-grey: #555555;
+    --bg-light: #F9F9F9;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Premium Header */
+header {
+    background-color: var(--white);
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--corp-blue);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--corp-gold);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--corp-gold);
+}
+
+/* Full-Screen Corporate Hero */
+.hero-corporate {
+    height: 90vh;
+    background: linear-gradient(to right, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.4)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000&auto=format&fit=crop') center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    color: var(--corp-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero-corporate h1 {
+    font-size: 4rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero-corporate p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #E0E0E0;
+    max-width: 600px;
+}
+
+.btn-gold {
+    background-color: var(--corp-gold);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-gold:hover {
+    background-color: var(--corp-gold-hover);
+    transform: translateY(-2px);
+}
+
+/* Corporate Sections */
+.section {
+    padding: 6rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--corp-blue);
+    margin-bottom: 1rem;
+}
+
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--corp-gold);
+    margin: 0 auto 4rem auto;
+}
+
+/* Divisions Grid (Similar to Siddiqsons) */
+.divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.division-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background-color: var(--corp-blue);
+    display: flex;
+    align-items: flex-end;
+}
+
+.division-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+    opacity: 0.7;
+}
+
+.division-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.division-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    color: var(--white);
+    width: 100%;
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.9), transparent);
+}
+
+.division-content h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.division-content p {
+    font-size: 0.9rem;
+    color: #CCC;
+    margin-bottom: 1rem;
+}
+
+.division-link {
+    color: var(--corp-gold);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Global Presence Section */
+.global-section {
+    background-color: var(--corp-blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.global-section .section-title {
+    color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: #050d1a;
+    color: #888;
+    text-align: center;
+    padding: 3rem 10%;
+    font-size: 0.9rem;
+}
